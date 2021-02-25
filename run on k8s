@@ -2,7 +2,7 @@ minikube start
 install docker and staRT it
 install helm 
 (install nginx)
-
+(go to  deploy/k8s/nginx-ingress)
 kubectl apply -f mandatory.yaml
 kubectl apply -f local-cm.yaml
 kubectl apply -f local-svc.yaml
