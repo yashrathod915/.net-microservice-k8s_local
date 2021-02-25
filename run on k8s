@@ -1,0 +1,22 @@
+minikube start
+install docker and staRT it
+install helm 
+(install nginx)
+
+kubectl apply -f mandatory.yaml
+kubectl apply -f local-cm.yaml
+kubectl apply -f local-svc.yaml
+
+(go to src folder)
+docker-compose build
+
+(go to deploy\k8s\helm )
+.\deploy-all-mac.ps1 -imageTag linux-latest -useLocalk8s $true -imagePullPolicy Never
+
+kubectl get deployment
+kubectl get ing
+
+
+run kubectl get all
+(service/mvceshop                   NodePort       10.98.107.126    <none>        80:31215/TCP)
+
