@@ -11,7 +11,9 @@ install helm
 kubectl apply -f mandatory.yaml
 kubectl apply -f local-cm.yaml
 kubectl apply -f local-svc.yaml
-
+(run both command)
+ kubectl create deployment nginx --image=nginx
+ kubectl create deployment httpd --image=httpd
 (go to src folder)
 docker-compose build
 
