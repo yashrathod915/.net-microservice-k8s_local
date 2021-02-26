@@ -1,3 +1,8 @@
+(have root access 1st)
+sudo su
+(start docker 1st)
+sudo systemctl start docker
+
 minikube start
 install docker and staRT it
 install helm 
