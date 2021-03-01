@@ -27,3 +27,4 @@ kubectl get ing
 run kubectl get all
 (service/mvceshop                   NodePort       10.98.107.126    <none>        80:31215/TCP)
 
+kubectl expose deployment eshop-webmvc --type=NodePort --name=web
