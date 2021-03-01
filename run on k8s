@@ -28,3 +28,19 @@ run kubectl get all
 (service/mvceshop                   NodePort       10.98.107.126    <none>        80:31215/TCP)
 
 kubectl expose deployment eshop-webmvc --type=NodePort --name=web
+
+
+for custom port
+dotnet-microservice-k8s_local/deploy/k8s/helm/webmvc/templates/service.yaml
+
+[    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: NodePort
+  #type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      nodePort : 30301
+]
+
